@@ -10,7 +10,7 @@ public partial class ToolBase : Button
 	{
 		Icon = ToolIcon;
 		ToggleMode = true;
-		AddThemeConstantOverride("icon_max_width", 32);
+		AddThemeConstantOverride("icon_max_width", (int)AppPreferences.IconSize);
 	}
 
 	// Called when the node enters the scene tree for the first time.
