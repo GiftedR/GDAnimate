@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b2runxh3p2dmx"]
 
-[ext_resource type="Script" path="res://Modules/Tools/ToolBase.cs" id="1_a6lvo"]
+[ext_resource type="Script" path="res://Modules/App/AppRoot.cs" id="1_fwd7n"]
 
 [node name="CTR2_App_Root" type="Control"]
 layout_mode = 3
@@ -9,9 +9,26 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fwd7n")
 
-[node name="ToolBase" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
-script = ExtResource("1_a6lvo")
+[node name="VBC2_Main_Menu_Bar_Splitter" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MNB2_Actions" type="MenuBar" parent="VBC2_Main_Menu_Bar_Splitter"]
+layout_mode = 2
+
+[node name="File" type="PopupMenu" parent="VBC2_Main_Menu_Bar_Splitter/MNB2_Actions"]
+
+[node name="Edit" type="PopupMenu" parent="VBC2_Main_Menu_Bar_Splitter/MNB2_Actions"]
+
+[node name="Project" type="PopupMenu" parent="VBC2_Main_Menu_Bar_Splitter/MNB2_Actions"]
+
+[node name="NDE_Popups" type="Node" parent="."]
+
+[node name="FileDialog" type="FileDialog" parent="NDE_Popups"]
+size = Vector2i(392, 159)
